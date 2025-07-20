@@ -4,7 +4,7 @@ import HeaderRight from './HeaderRight';
 
 export default function Header() {
   return (
-    <header>
+    <header className="flex items-center justify-between text-2xl p-4">
       <Logo />
       <Navigation />
       <HeaderRight />
