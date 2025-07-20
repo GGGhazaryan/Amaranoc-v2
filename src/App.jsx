@@ -1,25 +1,25 @@
-import './App.css'
-import { useState } from 'react'
-import Header from './Header.jsx'
-import LeftContent from './LeftContent.jsx'
-import { RightContent } from './RightContent.jsx';
-
-import GeneralFooter from './GeneralFooter.jsx'
-import Footer from './Footer.jsx'
+import LeftContent from './components/LeftContent/LeftContent';
+import RightContent from './components/RightContent/RightContent';
+import GeneralFooter from './components/GeneralFooter/GeneralFooter';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import './css/App.css';
+import './css/index.css';
 
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Header />
-      <div className="contentWrapper">
+      <div className="mainContentWrapper">
         <LeftContent />
         <RightContent />
-
+        
       </div>
-      <GeneralFooter />
-      <Footer />
-    </>
-  )
+       <GeneralFooter />
+       <Footer/>
+    </div>
+  );
 }
-export default App
+
+export default App;

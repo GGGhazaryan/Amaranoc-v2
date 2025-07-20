@@ -1,18 +1,19 @@
-import { useState } from 'react'
-export default function PeopleCounter({ label }) {
+import { useState } from 'react';
 
-const [count, setCount] = useState(1)
+export default function PeopleCounter({ label, min = 1, max = 99 }) {
+  const [count, setCount] = useState(min);
+
   const increase = () => {
-    setCount(prev => prev + 1)
-  }
+    setCount(prev => (prev < max ? prev + 1 : prev));
+  };
 
   const decrease = () => {
-    setCount(prev => (prev > 1 ? prev - 1 : 1))
-  }
+    setCount(prev => (prev > min ? prev - 1 : prev));
+  };
 
   return (
     <div className="peopleCount">
-      <div className="h3second">{label}</div>
+      {label && <div className="h3second">{label}</div>}
       <div className="peopleCounter">
         <button className="minusBtn countBtn" onClick={decrease}>-</button>
         <input
@@ -24,5 +25,5 @@ const [count, setCount] = useState(1)
         <button className="plusBtn countBtn" onClick={increase}>+</button>
       </div>
     </div>
-  )
+  );
 }
