@@ -141,11 +141,11 @@ header {
     font-size: 16px;
     padding-bottom: 10px;
     font-weight: bold;
-}   
+}
 
 .checkboxsArray {
     padding: 10px 0;
-    background:white;
+    background: white;
 }
 
 .customCheckbox {
@@ -173,7 +173,6 @@ header {
 }
 
 .customCheckbox input:checked+.checkmark {
-
     border-color: orange;
 }
 
@@ -380,11 +379,11 @@ header {
 
 .rightContentWrapper {
     display: grid;
-    gap: 24px;
+    gap: 3px;
     padding: 20px;
     background: #f7f7f7;
     min-height: 100vh;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     box-sizing: border-box;
 }
 
@@ -401,7 +400,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 300px;
     color: white;
+    gap: 15px;
 }
 
 .card:hover {
